@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Nike Air Max 90",
+    "price": 1899,
+    "category": "Shoes",
+    "description": "Iconic Air Max cushioning with a waffle outsole and premium materials for comfort and style.",
+    "rating": 4.5,
+    "image": "image.png"
+  },
+  {
+    "id": 2,
+    "name": "Adidas Ultra Boost",
+    "price": 2199,
+    "category": "Shoes",
+    "description": "Premium running shoes with responsive boost technology that returns energy with every step you take.",
+    "rating": 4.7,
+    "image": "image.png"
+  },
+  {
+    "id": 3,
+    "name": "Puma Suede Classic",
+    "price": 1599,
+    "category": "Shoes",
+    "description": "Iconic casual sneakers with a suede upper and classic design that never goes out of style.",
+    "rating": 4.2,
+    "image": "image.png"
+  },
+  {
+    "id": 4,
+    "name": "Cole Haan Oxford Dress Shoes",
+    "price": 3499,
+    "category": "Shoes",
+    "description": "Premium leather dress shoes with elegant design, perfect for formal occasions.",
+    "rating": 4.8,
+    "image": "image.png"
+  },
+  {
+    "id": 5,
+    "name": "New Balance 574",
+    "price": 1799,
+    "category": "Shoes",
+    "description": "Classic athletic shoes with superior comfort and retro styling.",
+    "rating": 4.3,
+    "image": "image.png"
+  },
+  {
+    "id": 6,
+    "name": "Nike Air Force 1",
+    "price": 1999,
+    "category": "Shoes",
+    "description": "Legendary basketball shoes with a clean look and Air cushioning.",
+    "rating": 4.6,
+    "image": "image.png"
+  },
+  {
+    "id": 7,
+    "name": "Timberland Premium Boots",
+    "price": 3299,
+    "category": "Shoes",
+    "description": "Waterproof nubuck leather boots with padded collars for comfort and durability.",
+    "rating": 4.5,
+    "image": "image.png"
+  },
+  {
+    "id": 8,
+    "name": "Steve Madden Sandals",
+    "price": 1299,
+    "category": "Shoes",
+    "description": "Trendy sandals with a comfortable footbed and adjustable straps.",
+    "rating": 4.0,
+    "image": "image.png"
+  },
+  {
+    "id": 9,
+    "name": "Vans Old Skool",
+    "price": 1499,
+    "category": "Shoes",
+    "description": "Classic skate shoes with the iconic sidestripe and durable canvas construction.",
+    "rating": 4.4,
+    "image": "image.png"
+  },
+  {
+    "id": 10,
+    "name": "Converse Chuck Taylor All Star",
+    "price": 1299,
+    "category": "Shoes",
+    "description": "Timeless canvas sneakers with signature rubber toe cap and diamond pattern sole.",
+    "rating": 4.2,
+    "image": "image.png"
+  },
+  {
+    "id": 11,
+    "name": "Dr. Martens 1460",
+    "price": 3599,
+    "category": "Shoes",
+    "description": "Iconic 8-eye leather boots with yellow welt stitching and air-cushioned sole.",
+    "rating": 4.7,
+    "image": "image.png"
+  },
+  {
+    "id": 12,
+    "name": "Christian Louboutin Stilettos",
+    "price": 12999,
+    "category": "Shoes",
+    "description": "Luxury high heels with signature red soles and classic silhouette.",
+    "rating": 4.9,
+    "image": "image.png"
+  },
+  {
+    "id": 13,
+    "name": "Asics Gel-Kayano",
+    "price": 2499,
+    "category": "Shoes",
+    "description": "Premium running shoes with excellent support and GEL cushioning system.",
+    "rating": 4.6,
+    "image": "image.png"
+  },
+  {
+    "id": 14,
+    "name": "Allen Edmonds Park Avenue",
+    "price": 7999,
+    "category": "Shoes",
+    "description": "Handcrafted leather cap-toe oxford dress shoes, perfect for business attire.",
+    "rating": 4.8,
+    "image": "image.png"
+  },
+  {
+    "id": 15,
+    "name": "Reebok Classic Leather",
+    "price": 1699,
+    "category": "Shoes",
+    "description": "Vintage-inspired sneakers with soft leather upper and EVA midsole for lightweight cushioning.",
+    "rating": 4.3,
+    "image": "image.png"
+  },
+  {
+    "id": 16,
+    "name": "Clarks Desert Boots",
+    "price": 2299,
+    "category": "Shoes",
+    "description": "Iconic chukka boots with crepe sole and suede upper, perfect for casual styling.",
+    "rating": 4.4,
+    "image": "image.png"
+  },
+  {
+    "id": 17,
+    "name": "Salomon Speedcross",
+    "price": 2799,
+    "category": "Shoes",
+    "description": "Trail running shoes with aggressive grip and protective features for off-road terrain.",
+    "rating": 4.7,
+    "image": "image..png"
+  },
+  {
+    "id": 18,
+    "name": "Under Armour HOVR",
+    "price": 2399,
+    "category": "Shoes",
+    "description": "Innovative running shoes with 'zero gravity feel' and energy return technology.",
+    "rating": 4.5,
+    "image": "image.png"
+  },
+  {
+    "id": 19,
+    "name": "UGG Classic Short",
+    "price": 3999,
+    "category": "Shoes",
+    "description": "Cozy sheepskin boots with soft wool lining and lightweight sole for ultimate comfort.",
+    "rating": 4.6,
+    "image": "image.png"
+  },
+  {
+    "id": 20,
+    "name": "Brooks Ghost",
+    "price": 2699,
+    "category": "Shoes",
+    "description": "Neutral running shoes with balanced cushioning and smooth transitions.",
+    "rating": 4.5,
+    "image": "image.png"
+  }
+]
