@@ -1,5 +1,8 @@
 # ShoeHaven - AI-Powered Footwear E-commerce Website
 
+# Review 
+[text](../screen-capture.webm)
+
 This is an AI-powered shoes e-commerce website featuring shoe products with natural language search capabilities using OpenAI embeddings. Users can search for shoes using natural language queries and interact with an AI assistant.
 
 ## Tech Stack
