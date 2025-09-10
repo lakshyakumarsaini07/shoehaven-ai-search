@@ -68,10 +68,6 @@ Since the frontend is built using vanilla HTML, CSS, and JavaScript, you can ser
 
    python -m http.server 3000
 
-3. Access the application in your browser at:
-
-   http://localhost:3000
-
 ## Usage
 
 1. The application will load with a list of all shoe products.
