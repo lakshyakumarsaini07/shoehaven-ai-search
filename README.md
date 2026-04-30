@@ -1,105 +1,169 @@
-# ShoeHaven - AI-Powered Footwear E-commerce Website
+# ShoeHaven – Semantic AI Search for Footwear E-commerce
 
-# Review 
-[text](../screen-capture.webm)
+![GitHub repo size](https://img.shields.io/github/repo-size/lakshyakumarsaini07/RAG-Q-A-Chatbot)
+![GitHub stars](https://img.shields.io/github/stars/lakshyakumarsaini07/RAG-Q-A-Chatbot?style=social)
+![GitHub forks](https://img.shields.io/github/forks/lakshyakumarsaini07/RAG-Q-A-Chatbot?style=social)
+![Issues](https://img.shields.io/github/issues/lakshyakumarsaini07/RAG-Q-A-Chatbot)
+![License](https://img.shields.io/github/license/lakshyakumarsaini07/RAG-Q-A-Chatbot)
 
-This is an AI-powered shoes e-commerce website featuring shoe products with natural language search capabilities using OpenAI embeddings. Users can search for shoes using natural language queries and interact with an AI assistant.
+---
+
+## Overview
+
+ShoeHaven is an AI-powered product search system that replaces traditional filter-based e-commerce search with semantic understanding.
+
+Instead of relying on exact keywords, the system interprets user intent using embeddings and returns the most relevant products.
+
+This project demonstrates how retrieval-based AI can be applied to real-world product discovery systems.
+
+---
+
+## Demo
+
+https://github.com/user-attachments/assets/388b7292-147f-4545-8fcc-5fb6aa4ce75c
+
+
+
+---
+
+## Key Features
+
+- Semantic product search using natural language  
+- Embedding-based similarity ranking  
+- FastAPI backend with clean API design  
+- Fallback keyword search for reliability  
+- Lightweight and extensible architecture  
+
+---
 
 ## Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript (vanilla, no frameworks)
-- **Backend**: FastAPI (Python)
-- **AI Feature**: Natural Language Search using OpenAI embeddings (text-embedding-3-small model)
+### Frontend
+- HTML  
+- CSS  
+- Vanilla JavaScript  
+
+### Backend
+- FastAPI (Python)
+
+### AI Layer
+- OpenAI Embeddings (`text-embedding-3-small`)  
+- Cosine similarity for ranking  
+
+---
+
+## System Architecture
+
+```
+                ┌──────────────────────┐
+                │     User Query       │
+                └─────────┬────────────┘
+                          │
+                          ▼
+                ┌──────────────────────┐
+                │   Frontend (JS UI)   │
+                └─────────┬────────────┘
+                          │ API Call
+                          ▼
+                ┌──────────────────────┐
+                │  FastAPI Backend     │
+                └─────────┬────────────┘
+                          │
+        ┌─────────────────┼─────────────────┐
+        ▼                                   ▼
+┌──────────────────┐              ┌──────────────────┐
+│ Embed User Query │              │ Product Embedding│
+│ (OpenAI API)     │              │ (Precomputed)    │
+└──────────────────┘              └──────────────────┘
+        │                                   │
+        └──────────────┬────────────────────┘
+                       ▼
+            ┌──────────────────────┐
+            │ Cosine Similarity    │
+            │ + Ranking Engine     │
+            └─────────┬────────────┘
+                      ▼
+            ┌──────────────────────┐
+            │  Top-K Products      │
+            └─────────┬────────────┘
+                      ▼
+            ┌──────────────────────┐
+            │   Frontend Display   │
+            └──────────────────────┘
+```
+
+---
+
+## Data Flow
+
+1. Product data is loaded from `products.json`  
+2. Each product is converted into embeddings  
+3. User query is embedded using the same model  
+4. Cosine similarity is computed  
+5. Results are ranked and returned  
+
+Fallback:
+- If API is unavailable → keyword-based search  
+
+---
 
 ## Project Structure
 
+```
 app/
 ├── backend/
-│ ├── main.py
-│ ├── requirements.txt
-│ └── .env
+│   ├── main.py
+│   ├── requirements.txt
+│   └── .env
 ├── data/
-│ └── products.json
+│   └── products.json
 └── frontend/
-├── index.html
-├── styles.css
-└── script.js
+    ├── index.html
+    ├── styles.css
+    └── script.js
+```
+
+---
 
 ## Setup Instructions
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- OpenAI API key
+- Python 3.8+  
+- OpenAI API Key  
+
+---
 
 ### Backend Setup
 
-1. Navigate to the backend directory:
+```bash
+cd app/backend
+pip install -r requirements.txt
+```
 
-   cd app/backend
+Create `.env` file:
 
-2. Install the required dependencies:
+```
+OPENAI_API_KEY=your_api_key_here
+```
 
-   pip install -r requirements.txt
+Run the backend:
 
-3. Set up your OpenAI API key:
+```bash
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
 
-   - Open the `.env` file
-   - Replace the API key with your valid OpenAI API key
-   - Note: If your API key is invalid or not provided, the application will fallback to a simpler keyword-based search instead of using AI embeddings
-
-4. Start the FastAPI server:
-
-   uvicorn main:app --reload --host 0.0.0.0 --port 8000
+---
 
 ### Frontend Setup
 
-Since the frontend is built using vanilla HTML, CSS, and JavaScript, you can serve it using any static file server. Here are a few options:
+```bash
+cd app/frontend
+python -m http.server 3000
+```
 
-#### Using Python's built-in HTTP server
+---
 
-1. Navigate to the frontend directory:
+## License
 
-   cd app/frontend
-
-2. Start a simple HTTP server:
-
-   # For Python 3
-
-   python -m http.server 3000
-
-## Usage
-
-1. The application will load with a list of all shoe products.
-2. Use the AI search bar to enter natural language queries like:
-   - "Show me running shoes under 2000 with good ratings"
-   - "Casual shoes with high ratings"
-   - "Affordable boots"
-3. The system will use AI to understand your query and return the most relevant shoes.
-
-## Features
-
-- **Shoe Products**: A comprehensive catalog of footwear with detailed information and shoe emoji for each product
-- **AI-Powered Search**: Users can search for shoes using natural language queries
-- **AI Assistant Chat**: Interactive AI chatbot to help users find the perfect shoes
-- **Enhanced UI/UX**: Modern, responsive design with intuitive navigation and visual appeal
-- **Natural language search** using OpenAI embeddings
-- **Semantic understanding** of user queries
-- **Relevance-based product ranking**
-
-## Technical Implementation
-
-- The backend loads product data from a JSON file
-- Each product's details (name, category, description) are embedded using OpenAI's text-embedding-3-small model
-- When a user submits a query, the query is also embedded using the same model
-- Cosine similarity is computed between the query embedding and all product embeddings
-- Products are ranked by similarity score and the top results are returned
-- A fallback keyword-based search is implemented for when the OpenAI API is unavailable or the key is invalid
-
-## Bonus: AI and Blockchain Integration Idea
-
-This AI search system could be enhanced with blockchain by:
-
-- Using on-chain user preferences for personalization
-- Offering token-gated pricing or exclusive product tiers
-- Enabling loyalty through smart contracts linked to AI-driven engagement
+This project is licensed under the MIT License.
